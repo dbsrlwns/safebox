@@ -11,7 +11,7 @@ function StartPage() {
             <div style={{ textAlign: 'center', marginTop: '7rem' }}>
                 <img src={Image2} style={{ width: '80px', height: '80px'}} />
                 <p style={{ fontSize: '55px', color: 'black', fontWeight: 'bolder', marginTop: '4rem' }}>
-                    <i><span style={{fontSize:'65px'}}>Safe Box</span></i>로 만나는 좋은 날날
+                    <i><span style={{fontSize:'65px'}}>Safe Box</span></i>로 만나는 좋은 날날skfskfskfskfskf
                 </p>
             
             <img src={Image1} style={{ width: '100%', height: '750px', marginTop: '2rem', marginBottom: '2rem' }} />
@@ -25,7 +25,7 @@ function StartPage() {
                 <img src={Image4} style={{ marginLeft: '5rem', width:'60px', height: '70px' }}/>
                 <img src={Image5} style={{ marginLeft: '5rem', width:'60px', height: '70px' }}/>
             </div>
-                
+            
             
         </div>
     )
