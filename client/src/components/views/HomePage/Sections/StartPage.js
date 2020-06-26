@@ -13,7 +13,9 @@ function StartPage() {
                 <p style={{ fontSize: '55px', color: 'black', fontWeight: 'bolder', marginTop: '4rem' }}>
 
                     <i><span style={{fontSize:'65px'}}>Safe Box</span></i>앞에다 에프 시발 로 만나는 좋은 날fffffffffffffffffffff
+
                     <h2>왜충돌이안나지</h2>
+
                 </p>
             
             <img src={Image1} style={{ width: '100%', height: '750px', marginTop: '2rem', marginBottom: '2rem' }} />
