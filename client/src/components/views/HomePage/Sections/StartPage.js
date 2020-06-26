@@ -13,6 +13,7 @@ function StartPage() {
                 <p style={{ fontSize: '55px', color: 'black', fontWeight: 'bolder', marginTop: '4rem' }}>
 
                     <i><span style={{fontSize:'65px'}}>Safe Box</span></i>앞에다 에프 시발 로 만나는 좋은 날fffffffffffffffffffff
+                  <h2> ㅁㄴ아ㅣㅓㄹ;ㅣ만어리;ㅏㄴ멀;님아ㅓㄴ이마</h2>
 
                 </p>
             
