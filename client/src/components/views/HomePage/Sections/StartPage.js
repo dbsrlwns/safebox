@@ -12,9 +12,13 @@ function StartPage() {
                 <img src={Image2} style={{ width: '80px', height: '80px'}} />
                 <p style={{ fontSize: '55px', color: 'black', fontWeight: 'bolder', marginTop: '4rem' }}>
 
-                    <i><span style={{fontSize:'65px'}}>Safe Box</span></i>앞에다 에프 시발 로 만나는 좋은 날fffffffffffffffffffff
-                  <h2> ㅁㄴ아ㅣㅓㄹ;ㅣ만어리;ㅏㄴ멀;님아ㅓㄴ이마</h2>
-                  <h1>fdsfdasdsadf</h1>
+                    <i><span style={{fontSize:'65px'}}>Safe Box</span></i>로 만나는 좋은 날
+{/*<<<<<<< HEAD*/}
+{/*                  <h2> ㅁㄴ아ㅣㅓㄹ;ㅣ만어리;ㅏㄴ멀;님아ㅓㄴ이마</h2>*/}
+{/*                  <h1>fdsfdasdsadf</h1>*/}
+{/*=======*/}
+
+                    <h2>왜충돌이안나지</h2>
 
                 </p>
             
