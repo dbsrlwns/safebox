@@ -1,15 +1,10 @@
-import React, { useEffect } from "react";
-import MapPage from './Sections/MapPage'
-
+import React from "react";
 
 function BlackboxPage() {
-  
-      
-  
     return(
-      <>
-      <MapPage />
-      </>
+      <div>
+        
+      </div>
     )
 }
 
