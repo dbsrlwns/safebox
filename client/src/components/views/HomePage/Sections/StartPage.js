@@ -12,7 +12,7 @@ function StartPage() {
                 <img src={Image2} style={{ width: '80px', height: '80px'}} />
                 <p style={{ fontSize: '55px', color: 'black', fontWeight: 'bolder', marginTop: '4rem' }}>
 
-                    <i><span style={{fontSize:'65px'}}>Safe Box</span></i>로 만나는 좋은 날날skfskfskfsfksfksfksfk
+                    <i><span style={{fontSize:'65px'}}>Safe Box</span></i>로 만나는 좋은 날fffffffffffffffffffff
 
                 </p>
             
