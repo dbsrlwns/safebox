@@ -1,14 +1,3 @@
-// <<<<<<< HEAD
-// import React from "react";
-// import MapPage from './Sections/MapPage.js';
-
-// function CaloriePage() {
-//     return(
-//         <div>
-//             <MapPage />
-//         </div>
-//     )
-// =======
 import React, { useEffect, useState } from 'react'
 import  './caloriePage.css'
 import Loc from './Sections/loc'
@@ -29,12 +18,14 @@ function CaloriePage() {
   
   
   
-  
-  
   return (
     <div>
+
     <div id="map" style={{height:'400px', width:'500px'}} >
-  
+
+
+ 
+
       {Loca && Loca.map((movie, index) => (
         <React.Fragment key={index}>
           <MapPage
@@ -44,12 +35,10 @@ function CaloriePage() {
         </React.Fragment>
       ))}
       
-      
-  
     </div>
-  </div>
-      )
-      
 
+    </div>
+  )
 }
+
 export default CaloriePage
