@@ -1,25 +1,38 @@
 import React, { useEffect } from "react";
 
-const { naver } = window; 
+const { naver } = window;
 
-function MapPage() {
+function MapPage(props) {
   
-        useEffect(() => {
-            const container = document.getElementById('map'); 
-            const mapOptions = {
-                center: new naver.maps.LatLng(37.3595704, 127.105399),
-                zoom: 10
-            }
-            const map = new naver.maps.Map('map', {
-                center: new naver.maps.LatLng(37.3595704, 127.105399),
-                zoom: 10
-            });
-        }, [])
+  console.log(typeof(props.movieloc),"propsssss")
+  const obbb = props.movieloc;
+  console.log(Object.entries(obbb),'이거는')
   
+  
+  useEffect(() => {
+    
+    const container = document.getElementById('map');
+    
+    const options = {
+      center: new naver.maps.LatLng(37.359924641705476, 127.1148204803467),
+      level: 3
+    };
+    const map = new naver.maps.Map(container, options);
+    
+    var polyline = new naver.maps.Polyline({
+      map: map,
+      path:[
+        props.movieloc
+      ]
+    });
+    
+  
+  }, [])
+
     return(
-        <div id="map" style={{ width: "100%", height: "1000px", overflow: 'visible' }}>
-           
-        </div>
+       <>
+         
+         </>
     )
 }
 
