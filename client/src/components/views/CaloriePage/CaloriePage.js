@@ -23,8 +23,8 @@ function CaloriePage() {
   
   useEffect(() => {
     setLoca([...Loca,...Loc.members])
-    console.log(Loc.members,"되나용")
-    
+    // console.log(Loc.members,"되나용")
+   
   },[])
   
   
@@ -33,7 +33,7 @@ function CaloriePage() {
   
   return (
     <div>
-    <div id="map" >
+    <div id="map" style={{height:'400px', width:'500px'}} >
   
       {Loca && Loca.map((movie, index) => (
         <React.Fragment key={index}>
