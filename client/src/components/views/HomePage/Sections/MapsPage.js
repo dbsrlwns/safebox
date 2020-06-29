@@ -1,4 +1,5 @@
 import React from 'react';
+import {Animated} from "react-animated-css";
 import '../../../../index.css';
 const Image3 = require('../../../../assets/images/image7.jpg');
 const Image4 = require('../../../../assets/images/Image6.png');
@@ -9,14 +10,17 @@ function MapsPage() {
         <div>
             <img src={Image3} style={{ marginLeft: '8rem', width: '600px', height: '500px' }}/>
             <div className="div1">
+                
                 <p style={{ textAlign: "left", fontSize: '50px', color: 'black', fontWeight: 'bolder', marginTop: '15rem', marginLeft: '12rem' }}>
-                    Safe Box
+                <Animated animationIn="fadeInUp" animationInDuration={3000} isVisible={true}>Safe Box</Animated>
                 </p>
                 <p style={{ textAlign: "left", fontSize: '20px', color: 'black', fontWeight: '200', marginLeft: '12rem'}}>
+                <Animated animationIn="fadeInUp" animationInDuration={3000} isVisible={true}>
                 Safe Box는 기존 블랙박스, 액션 카메라의 영상촬영,<br/>
                 저장기능을 이용하여 사고가 발생 하였을 때 정확한 상황<br/>
                 판단하는 기능을 구현하여 사고가 발생한 기록 또는 사용자의<br/>
                 운동기록을 웹사이트에서 영상으로 확인할 수 있습니다.
+                </Animated>
                 </p>
             </div>
 

@@ -8,27 +8,27 @@ const Image5 = require('../../../../assets/images/icon6.PNG');
 
 function StartPage() {
     return (
-        <div>
-            
-            <Animated animationIn="fadeInUp" animationOut="fadeOutLeft" animationInDuration={1000} animationOutDuration={1000} isVisible={true}>
-                 <div>ddddddddddddddddddddd</div>
-            </Animated>   
+        <div> 
             
             <div style={{ textAlign: 'center', marginTop: '7rem' }}>
+            <Animated animationIn="fadeInDown" animationInDuration={3000} isVisible={true}>
                 <img src={Image2} style={{ width: '80px', height: '80px'}} />
+            </Animated>
                 <p style={{ fontSize: '55px', color: 'black', fontWeight: 'bolder', marginTop: '4rem' }}>
 
-                    <Animated animationIn="fadeInUp" isVisible={true}><i><span style={{fontSize:'65px'}}>Safe Box</span></i>로 만나는 좋은 날</Animated>
+                    <Animated animationIn="fadeInDown" animationInDuration={3000} isVisible={true}>
+                        <i><span style={{fontSize:'65px', color:"blue"}}>Safe Box</span></i>로 만나는 좋은 날
+                    </Animated>
                 </p>
             
             <img src={Image1} style={{ width: '100%', height: '750px', marginTop: '2rem', marginBottom: '2rem' }} />
             </div>
 
             <div className="div1">
-                <span style={{ marginLeft: '2rem', fontSize: '20px', color: 'black', fontWeight: 'bold' }}>
+                <span style={{ marginRight: "72rem", marginLeft: '2rem', fontSize: '20px', color: 'black', fontWeight: 'bold' }}>
                     SAFE BOX
                 </span>
-                <img src={Image3} style={{ marginLeft: '72rem', width:'60px', height: '70px' }}/>
+                <a href><img src={Image3} style={{ width:'60px', height: '70px' }}/></a>
                 <img src={Image4} style={{ marginLeft: '5rem', width:'60px', height: '70px' }}/>
                 <img src={Image5} style={{ marginLeft: '5rem', width:'60px', height: '70px' }}/>
             </div>

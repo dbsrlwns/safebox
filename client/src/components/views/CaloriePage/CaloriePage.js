@@ -3,7 +3,6 @@ import  './caloriePage.css'
 import Loc from './Sections/loc'
 import MapPage from './Sections/MapPage'
 
-const { naver } = window;
 
 function CaloriePage() {
   
@@ -11,21 +10,14 @@ function CaloriePage() {
 
   
   useEffect(() => {
-    setLoca([...Loca,...Loc.members])
-    // console.log(Loc.members,"되나용")
-   
-  },[])
-  
-  
+    setLoca([...Loca, ...Loc.members])
+    console.log(Loc.members,"되나용")
+    
+  },[]) 
   
   return (
-    <div>
-
-    <div id="map" style={{height:'400px', width:'500px'}} >
-
-
- 
-
+    <div id="map" style={{width:"50%"}}>
+  
       {Loca && Loca.map((movie, index) => (
         <React.Fragment key={index}>
           <MapPage
@@ -34,9 +26,7 @@ function CaloriePage() {
           />
         </React.Fragment>
       ))}
-      
-    </div>
-
+    
     </div>
   )
 }
