@@ -1,31 +1,35 @@
 import React, { useEffect, useState } from 'react'
 import  './caloriePage.css'
 import Loc from './Sections/loc'
-import MapPage from './Sections/MapPage'
+
+const { naver } = window;
 
 
 function CaloriePage() {
   
-  const [Loca, setLoca] = useState([])
 
-  
   useEffect(() => {
-    setLoca([...Loca, ...Loc.members])
-    console.log(Loc.members,"되나용")
+    const end = Loc.members
+    const names = end.map(x => x.loc);
+    console.log(names,"ages")
     
-  },[]) 
+    const container = document.getElementById('map');
+
+    const options = {
+      center: new naver.maps.LatLng(37.3685882848096, 127.11486339569092),
+      level: 3
+    };
+
+    const map = new naver.maps.Map(container, options);
+
+    var polyline = new naver.maps.Polyline({
+      map: map,
+      path: names
+    },);
+  },[])
   
   return (
     <div id="map" style={{width:"50%"}}>
-  
-      {Loca && Loca.map((movie, index) => (
-        <React.Fragment key={index}>
-          <MapPage
-            movieId={movie.id}
-            movieloc={movie.loc}
-          />
-        </React.Fragment>
-      ))}
     
     </div>
   )
