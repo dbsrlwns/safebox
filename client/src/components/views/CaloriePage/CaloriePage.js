@@ -24,7 +24,12 @@ function CaloriePage() {
 
     var polyline = new naver.maps.Polyline({
       map: map,
-      path: names
+      path: names,
+      fillOpacity: 0.3,
+      strokeColor: 'purple',
+      strokeOpacity: 0.6,
+      strokeWeight:4 ,
+      clickable: true
     },);
   },[])
   
