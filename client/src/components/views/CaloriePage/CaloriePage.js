@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import  './caloriePage.css'
 import Loc from './Sections/loc'
+import MapPage from './Sections/MapPage'
 
 const { naver } = window;
 
@@ -10,49 +11,41 @@ function CaloriePage() {
 
   
   useEffect(() => {
-    const fakeLoc = () => {
-      for(let i=0; i<3;i++){
-        setLoca(Loc.members[i].loc)
-        console.log(Loc.members[i].loc,"되나용")
-      }
-    }
-  
-    fakeLoc()
+    setLoca([...Loca,...Loc.members])
+    console.log(Loc.members,"되나용")
+    
   },[])
   
-  console.log(Loca, "qqqq")
+<<<<<<< HEAD
+    fakeLoc()
+  },[])
+=======
+>>>>>>> 9fcd3380c5b1df2e2ea41932846c0493f995934d
   
-  useEffect(() => {
-    
-    
-    
-    const container = document.getElementById('map');
-   
-    const options = {
-      center: new naver.maps.LatLng(37.359924641705476, 127.1148204803467),
-      level: 3
-    };
-    const map = new naver.maps.Map(container, options);
   
-    var polyline = new naver.maps.Polyline({
-      map: map,
-      
-      path: [
-        [127.12293148040771, 37.36043630196386],
-        [127.12310314178465, 37.36354029942161],
-        [127.12456226348876, 37.365211629488016],
-        [127.1122455596923, 37.37544345085402]
-      ]
-      
-    });
-    
-  }, [])
+  
   
   return (
     <div>
+<<<<<<< HEAD
       <div id="map" >
     
       </div>
+=======
+    <div id="map" >
+  
+      {Loca && Loca.map((movie, index) => (
+        <React.Fragment key={index}>
+          <MapPage
+            movieId={movie.id}
+            movieloc={movie.loc}
+          />
+        </React.Fragment>
+      ))}
+      
+      
+  
+>>>>>>> 9fcd3380c5b1df2e2ea41932846c0493f995934d
     </div>
   )
 }
