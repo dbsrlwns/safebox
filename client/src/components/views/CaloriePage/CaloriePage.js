@@ -1,11 +1,31 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import  './caloriePage.css'
+import Loc from './Sections/loc'
 
 const { naver } = window;
 
 function CaloriePage() {
   
+  const [Loca, setLoca] = useState([])
+
+  
   useEffect(() => {
+    const fakeLoc = () => {
+      for(let i=0; i<3;i++){
+        setLoca(Loc.members[i].loc)
+        console.log(Loc.members[i].loc,"되나용")
+      }
+    }
+  
+    fakeLoc()
+  },[])
+  
+  console.log(Loca, "qqqq")
+  
+  useEffect(() => {
+    
+    
+    
     const container = document.getElementById('map');
    
     const options = {
@@ -16,30 +36,25 @@ function CaloriePage() {
   
     var polyline = new naver.maps.Polyline({
       map: map,
+      
       path: [
-        new naver.maps.LatLng(37.359924641705476, 127.1148204803467),
-        new naver.maps.LatLng(37.36343797188166, 127.11486339569092),
-        new naver.maps.LatLng(37.368520071054576, 127.11473464965819),
-        new naver.maps.LatLng(37.3685882848096, 127.1088123321533),
-        new naver.maps.LatLng(37.37295383612657, 127.10876941680907),
-        new naver.maps.LatLng(37.38001321351567, 127.11851119995116),
-        new naver.maps.LatLng(37.378546827477855, 127.11984157562254),
-        new naver.maps.LatLng(37.376637072444105, 127.12052822113036),
-        new naver.maps.LatLng(37.37530703574853, 127.12190151214598),
-        new naver.maps.LatLng(37.371657839593894, 127.11645126342773),
-        new naver.maps.LatLng(37.36855417793982, 127.1207857131958)
+        [127.12293148040771, 37.36043630196386],
+        [127.12310314178465, 37.36354029942161],
+        [127.12456226348876, 37.365211629488016],
+        [127.1122455596923, 37.37544345085402]
       ]
+      
     });
+    
   }, [])
   
   return (
     <div>
-    <div id="map" >
+      <div id="map" >
     
+      </div>
     </div>
-    </div>
-      )
-      
-
+  )
 }
+
 export default CaloriePage
