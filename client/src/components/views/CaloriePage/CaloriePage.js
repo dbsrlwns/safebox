@@ -7,9 +7,7 @@ const { naver } = window;
 
 
 function CaloriePage() {
-  
 
-  
 
   useEffect(() => {
 
@@ -40,16 +38,16 @@ function CaloriePage() {
       //거리구하기
       let distance = polyline.getDistance();
     let km = distance / 1000;
-      console.log(distance, "dsises")
     console.log(km.toFixed(1),"km")
    
   },[])
   
   return (
     <div id="mapContainer">
-    <div id="map" >
-    
-    </div>
+      <div id="map" >
+        
+      </div>
+      
     </div>
   )
 }
