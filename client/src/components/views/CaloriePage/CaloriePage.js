@@ -31,6 +31,11 @@ function CaloriePage() {
       strokeWeight:4 ,
       clickable: true
     },);
+  
+  //거리구하기
+  let distance = polyline.getDistance();
+  console.log(distance,"dsises")
+  
   },[])
   
   return (
