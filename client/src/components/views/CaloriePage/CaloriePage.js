@@ -7,6 +7,7 @@ const { naver } = window;
 
 
 function CaloriePage() {
+
   const a = Loc.one
   const b = Loc.three
 
@@ -71,7 +72,7 @@ function CaloriePage() {
     console.log(distance, "distance")
     let showDistance = km.toFixed(1)
     console.log(showDistance,"km로 표현")
-   
+ 
   },[])
   
   
@@ -89,6 +90,7 @@ function CaloriePage() {
     <div id="map" >
     
     </div>
+
     </div>
   )
 }
