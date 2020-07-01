@@ -30,7 +30,7 @@ function UploadVideoPage(props) {
     const [FilePath, setFilePath] = useState("")
     const [Duration, setDuration] = useState("")
     const [Thumbnail, setThumbnail] = useState("")
-
+    const [Location,setLocation]  = useState("")
 
     const handleChangeTitle = (event) => {
         setTitle(event.currentTarget.value)
@@ -48,6 +48,10 @@ function UploadVideoPage(props) {
 
     const handleChangeTwo = (event) => {
         setCategories(event.currentTarget.value)
+    }
+    
+    const handleChangeLocation = (event) => {
+        setLocation(event.currentTarget.value)
     }
 
     const onSubmit = (event) => {
@@ -72,7 +76,8 @@ function UploadVideoPage(props) {
             filePath: FilePath,
             category: Categories,
             duration: Duration,
-            thumbnail: Thumbnail
+            thumbnail: Thumbnail,
+            location: Location
         }
 
         axios.post('/api/video/uploadVideo', variables)
@@ -106,7 +111,7 @@ function UploadVideoPage(props) {
                     }
                     setFilePath(response.data.filePath)
 
-                    //gerenate thumbnail with this filepath ! 
+                    //gerenate thumbnail with this filepath !
 
                     axios.post('/api/video/thumbnail', variable)
                         .then(response => {
@@ -163,6 +168,18 @@ function UploadVideoPage(props) {
                     value={title}
                 />
                 <br /><br />
+                
+                
+                {/*위동경도 배열로 올리기*/}
+  
+              <label>위치</label>
+              <Input
+                onChange={handleChangeLocation}
+                value={Location}
+              />
+              <br /><br />
+                
+                
                 <label>Description</label>
                 <TextArea
                     onChange={handleChangeDecsription}

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { User } = require("../models/User");
+const { UserSafebox } = require("../models/User");
 
 const { auth } = require("../middleware/auth");
 
@@ -23,7 +23,7 @@ router.get("/auth", auth, (req, res) => {
 
 router.post("/register", (req, res) => {
 
-    const user = new User(req.body);
+    const user = new UserSafebox(req.body);
 
     user.save((err, doc) => {
         if (err) return res.json({ success: false, err });
@@ -34,7 +34,7 @@ router.post("/register", (req, res) => {
 });
 
 router.post("/login", (req, res) => {
-    User.findOne({ email: req.body.email }, (err, user) => {
+  UserSafebox.findOne({ email: req.body.email }, (err, user) => {
         if (!user)
             return res.json({
                 loginSuccess: false,
@@ -60,7 +60,7 @@ router.post("/login", (req, res) => {
 });
 
 router.get("/logout", auth, (req, res) => {
-    User.findOneAndUpdate({ _id: req.user._id }, { token: "", tokenExp: "" }, (err, doc) => {
+  UserSafebox.findOneAndUpdate({ _id: req.user._id }, { token: "", tokenExp: "" }, (err, doc) => {
         if (err) return res.json({ success: false, err });
         return res.status(200).send({
             success: true

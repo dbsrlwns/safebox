@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const likeSchema = mongoose.Schema({
    userId: {
        type: Schema.Types.ObjectId,
-       ref: 'User'
+       ref: 'UserSafebox'
    },
    commentId: {
        type: Schema.Types.ObjectId,

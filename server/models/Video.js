@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const videoSchema = mongoose.Schema({
     writer: {
         type:Schema.Types.ObjectId,
-        ref: 'User'
+        ref: 'UserSafebox'
     },
     title: {
         type:String,
@@ -22,13 +22,16 @@ const videoSchema = mongoose.Schema({
     catogory: String,
     views : {
         type: Number,
-        default: 0 
+        default: 0
     },
     duration :{
         type: String
     },
     thumbnail: {
         type: String
+    },
+    location: {
+        type: Array
     }
 }, { timestamps: true })
 
