@@ -8,9 +8,9 @@ const { naver } = window;
 
 function CaloriePage() {
 
-  const a = Loc.one
+  const a = Loc.three
   const b = Loc.three
-
+console.log( a,"aaa")
   
   const Date = [
     { value: a, label: '1번' },
@@ -22,19 +22,21 @@ function CaloriePage() {
     setDate(event.currentTarget.value)
   }
  
-  var qqq = JSON.stringify(date)
-  console.log( typeof (qqq),"qqq")
+
+
+ 
+  console.log(date,"qqqq")
   
   //데이터 받아오기
   const end = Loc.one
   console.log(end,"endendendendned")
   const names = end.map(x => x.loc);
   console.log(names,"ages")
-  
+  //
   useEffect(() => {
   
-    // const fetchdate = Date[1].value
-    // console.log(fetchdate,"date")
+    const fetchdate = Date[1].value
+    console.log(fetchdate,"date")
   
   
     // const end = Loc.one
@@ -58,7 +60,7 @@ function CaloriePage() {
   
       var polyline = new naver.maps.Polyline({
         map: map,
-        path:qqq ,
+        path:names ,
         fillOpacity: 0.3,
         strokeColor: 'purple',
         strokeOpacity: 0.6,
@@ -85,7 +87,7 @@ function CaloriePage() {
         ))}
       </select>
   
-  <div> {qqq}
+  <div> {date}
   </div>
     <div id="map" >
     

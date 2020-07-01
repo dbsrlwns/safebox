@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const saltRounds = 10;
 const jwt = require('jsonwebtoken');
 
-const userSchema = mongoose.Schema({
+const userSafeSchema = mongoose.Schema({
     name: {
         type:String,
         maxlength:50
@@ -35,7 +35,7 @@ const userSchema = mongoose.Schema({
 })
 
 
-userSchema.pre('save', function( next ) {
+userSafeSchema.pre('save', function( next ) {
     var user = this;
     
     if(user.isModified('password')){
@@ -54,14 +54,14 @@ userSchema.pre('save', function( next ) {
     }
 });
 
-userSchema.methods.comparePassword = function(plainPassword,cb){
+userSafeSchema.methods.comparePassword = function(plainPassword,cb){
     bcrypt.compare(plainPassword, this.password, function(err, isMatch){
         if (err) return cb(err);
         cb(null, isMatch)
     })
 }
 
-userSchema.methods.generateToken = function(cb) {
+userSafeSchema.methods.generateToken = function(cb) {
     var user = this;
     var token =  jwt.sign(user._id.toHexString(),'secret')
 
@@ -72,7 +72,7 @@ userSchema.methods.generateToken = function(cb) {
     })
 }
 
-userSchema.statics.findByToken = function (token, cb) {
+userSafeSchema.statics.findByToken = function (token, cb) {
     var user = this;
 
     jwt.verify(token,'secret',function(err, decode){
@@ -83,6 +83,6 @@ userSchema.statics.findByToken = function (token, cb) {
     })
 }
 
-const UserSafebox = mongoose.model('UserSafebox', userSchema);
+const UserSafebox = mongoose.model('UserSafebox', userSafeSchema);
 
 module.exports = { UserSafebox }
