@@ -13,8 +13,8 @@ function CaloriePage() {
 console.log( a,"aaa")
   
   const Date = [
-    { value: a, label: '1번' },
-    { value: b, label: '2번' }
+    { value: a, label: '26일' },
+    { value: b, label: '27일' }
   ]
   const [date,setDate] = useState()
   
@@ -62,7 +62,7 @@ console.log( a,"aaa")
         map: map,
         path:names ,
         fillOpacity: 0.3,
-        strokeColor: 'purple',
+        strokeColor: 'blue',
         strokeOpacity: 0.6,
         strokeWeight: 4,
         clickable: true
@@ -79,13 +79,15 @@ console.log( a,"aaa")
   
   
   return (
-    <div id="mapContainer">
-  
-      <select onChange={handleChangeOne}>
+    <div style={{textAlign:'center'}}>
+      <select onChange={handleChangeOne} style={{position:'absolute', top:'100px'}}>
         {Date.map((item, index) => (
           <option key={index} value={[item.value]}>{item.label}</option>
         ))}
       </select>
+    <div id="mapContainer">
+  
+   
   
   <div> {date}
   </div>
@@ -94,7 +96,8 @@ console.log( a,"aaa")
     </div>
 
     </div>
-  )
+  </div>
+      )
 }
 
 export default CaloriePage
