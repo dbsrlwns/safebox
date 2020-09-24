@@ -43,12 +43,12 @@ function BlackboxPage() {
       
       </div><br />
       <Meta
-        avatar={
-          <Avatar src={video.writer.image} />
-        }
+        // avatar={
+        //   <Avatar src={video.writer.image} />
+        // }
         title={video.title}
       />
-      <span>{video.writer.name} </span><br />
+      {/*<span>{video.writer.name} </span><br />*/}
       <span style={{ marginLeft: '3rem' }}> {video.views}</span>
       - <span> {moment(video.createdAt).format("MMM Do YY")} </span>
     </Col>

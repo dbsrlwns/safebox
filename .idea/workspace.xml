@@ -24,7 +24,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../csyoutubeclone/nav-master" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -68,7 +68,12 @@
       <workItem from="1593609322462" duration="7937000" />
       <workItem from="1593949510471" duration="606000" />
       <workItem from="1594141157820" duration="1334000" />
-      <workItem from="1595940112350" duration="1400000" />
+      <workItem from="1595940112350" duration="2289000" />
+      <workItem from="1596032265873" duration="645000" />
+      <workItem from="1596083765356" duration="18000" />
+      <workItem from="1600611960505" duration="4174000" />
+      <workItem from="1600663067184" duration="1739000" />
+      <workItem from="1600955031735" duration="1242000" />
     </task>
     <servers />
   </component>
